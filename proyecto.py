@@ -225,7 +225,6 @@ def nmap():
  print()
  print("PORT     STATE   SERVICE       VERSION")
  print(leer) 
- print(f"ESTA ES LA DIRECCION WEB: " + (leer))
  print(f"{color.morado}QUE QUIERES HACER AHORA{color.fin}")
  print()
  print(f"{color.azul}[1] VOLVER")
