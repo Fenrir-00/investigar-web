@@ -225,4 +225,17 @@ def nmap():
  print()
  print("PORT     STATE   SERVICE       VERSION")
  print(leer) 
+ print(f"ESTA ES LA DIRECCION WEB: " + (leer))
+ print(f"{color.morado}QUE QUIERES HACER AHORA{color.fin}")
+ print()
+ print(f"{color.azul}[1] VOLVER")
+ print(f"{color.rojo}[2] SALIR{color.fin}")
+ print()
+ var=input(f"{color.cyan}ELIJE UN NUMERO >> {color.fin}")
+ if var == "1":
+  menu()
+ elif var == "2":
+  salir()
+ else :
+  incorrecto()
 menu()
