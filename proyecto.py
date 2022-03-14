@@ -214,7 +214,7 @@ def nmap():
  print()
  print(f"{color.amarillo}TEN PACIENCIA ESTO PUEDE TARDAR UNOS MINUTOS{color.fin}")
  time.sleep(3)
- os.system(f"nmap -v -sV {var1} -oN bueno.txt")
+ os.system(f"nmap -v -sV -T2 {var1} -oN bueno.txt")
  banner()
  var2=os.system('grep open bueno.txt >ttl.txt')
  fd = open("ttl.txt","r")
