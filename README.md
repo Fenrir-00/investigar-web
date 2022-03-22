@@ -8,7 +8,7 @@
 ```
 ```bash
 #git clone https://github.com/Fenrir-00/investigar-web
-'''
+```
 ```bash
 #cd investigar-web
 ```
