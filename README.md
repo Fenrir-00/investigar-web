@@ -1,17 +1,17 @@
 # investigar-web
 # instalación
 ``` bash
-#pkg install git
+pkg install git
 ```
 ```bash
-#pkg install python
+pkg install python
 ```
 ```bash
-#git clone https://github.com/Fenrir-00/investigar-web
+git clone https://github.com/Fenrir-00/investigar-web
 ```
 ```bash
-#cd investigar-web
+cd investigar-web
 ```
 ```bash
-#python3 proyecto.py
+python3 proyecto.py
 ```
