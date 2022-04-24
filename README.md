@@ -1,4 +1,4 @@
-# investigar-web
+![Screenshot](investigar.png)
 # instalación
 ``` bash
 pkg install git
