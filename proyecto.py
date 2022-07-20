@@ -152,6 +152,8 @@ def menu():
      dirb()
     elif eleccion == "3" :
      nmap()
+    elif eleccion == "4" :
+     sacar()
     elif eleccion == "0" :
      banner()
      salir() 
