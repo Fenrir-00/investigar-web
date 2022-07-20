@@ -243,4 +243,24 @@ def nmap():
   salir()
  else :
   incorrecto()
+def sacar ():
+ banner()
+ print()
+ print(f"{color.verde}ESTA ES TU IP PUBLICA:")
+ r= requests.get("https://ident.me")
+ r=r.text
+ print(f"{color.amarillo}",r,f"{color.fin}")
+ print()
+ print(f"{color.morado}QUE QUIERES HACER AHORA{color.fin}")
+ print()
+ print(f"{color.azul}[1] VOLVER")
+ print(f"{color.rojo}[2] SALIR{color.fin}")
+ print()
+ var=input(f"{color.cyan}ELIJE UN NUMERO >> {color.fin}")
+ if var == "1":
+  menu()
+ elif var == "2":
+  salir()
+ else :
+  incorrecto()
 menu()
