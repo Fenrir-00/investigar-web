@@ -1,4 +1,10 @@
 import os, sys, time, io
+while True:
+ try:
+  import requests
+  break
+ except ModuleNotFoundError:
+  os.system("pip install requests")
 
 class color:
     morado = '\033[95m'
