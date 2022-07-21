@@ -145,6 +145,7 @@ def menu():
     print(f"{color.verde}[2]BUSCAR SUBCARPETAS OCULTAS")
     print(f"{color.verde}[3]VER PUERTOS Y SERVICIOS")
     print(f"{color.verde}[4]VER MI IP PUBLICA")
+    print(f"{color.verde}[5]BUSCAR SUBDOMINIOS OCULTOS")
     print(f"{color.rojo}[0]SALIR{color.fin}")
     eleccion =input(f"{color.cyan}ELIJE UN NUMERO >>{color.fin} ")
     if eleccion == "1" :
