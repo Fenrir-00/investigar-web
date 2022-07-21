@@ -266,4 +266,59 @@ def sacar ():
   salir()
  else :
   incorrecto()
+def sub():
+ banner()
+ salto = "\n"
+ print()
+ print(f"{color.morado}    BUSCAR SUBDOMINIOS {color.fin}")
+ print()
+ print("EJEMPLO : google.com")
+ url = input(f"{color.cyan}introduce pagina >> {color.fin}")
+ fd = open("subdominio.txt","r")
+ leer = fd.readlines()
+ df =open("buenos.txt","w")
+ df.write("")
+ df.close()
+ df =open("buenos.txt","a")
+ contador = 0
+ for linea in leer:
+  contador +=1
+  if contador == 200 :
+   print(f"{color.verde} PROBADAS 200 CONTRASEÑAS{color.fin}")
+  if contador == 400 :
+   print(f"{color.verde} PROBADAS 400 CONTRASEÑAS{color.fin}")
+  if contador == 600 :
+   print(f"{color.verde} PROBADAS 600 CONTRASEÑAS{color.fin}")
+  if contador == 800 :
+   print(f"{color.verde} PROBADAS 800 CONTRASEÑAS{color.fin}")
+  var = linea.rstrip("\n")
+  print("https://"+var+"."+url)
+  data = "https://"+var+"."+url
+  try:
+   r= requests.get(data)
+   print(f"{color.amarillo}")
+   print(data)
+   df.write((data) + f"{salto}")
+   print(f"{color.fin}")
+  except:
+   pass
+ df.close()
+ banner()
+ print(f"{color.morado} RESULTADOS OPTENIDOS {color.amarillo}")
+ df = open("buenos.txt","r")
+ leer = df.read()
+ print(leer)
+ print()
+ print(f"{color.morado}QUE QUIERES HACER AHORA{color.fin}")
+ print()
+ print(f"{color.azul}[1] VOLVER")
+ print(f"{color.rojo}[2] SALIR{color.fin}")
+ print()
+ var=input(f"{color.cyan}ELIJE UN NUMERO >> {color.fin}")
+ if var == "1":
+  menu()
+ elif var == "2":
+  salir()
+ else :
+  incorrecto()
 menu()
