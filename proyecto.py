@@ -155,6 +155,8 @@ def menu():
      nmap()
     elif eleccion == "4" :
      sacar()
+    elif eleccion == "5" :
+     sub()
     elif eleccion == "0" :
      banner()
      salir() 
