@@ -43,6 +43,7 @@ def version():
  | Contact me on Telegram :    @Ritorito1990                |
  ============================================================    """
  lol_py(texto)
+ print()
 
 def carga():
     print(f"{color.verde}")
@@ -154,6 +155,7 @@ def menu():
     os.system("clear")
     banner()
     carga()
+    versión()
     print(f"{color.morado}    QUE PAGINA TE GUSTARIA INVESTIGAR")
     print("")
     print(f"{color.verde}[1]MANDAR PING")
