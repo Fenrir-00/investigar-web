@@ -35,13 +35,12 @@ def banner():
 ╚═╝     ╚══════╝╚═╝  ╚══╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝{color.fin}""")
 def version():
  texto ="""
- |==========================================================|
- | Script by              :    #FENRIR-00                   |
- | Version                :    Version  1.2                 |
- | Follow me on Github    :    https://github.com/Fenrir-00 |
- | Contact me on Telegram :    @Ritorito1990                |
- ============================================================    """
- lol_py(texto)
+ |=======================================================|
+ | Script by              : #FENRIR-00                   |
+ | Version                : Version  1.2                 |
+ | Follow me on Github    : https://github.com/Fenrir-00 |
+ | Contact me on Telegram : @Ritorito1990                |
+ ========================================================= """ lol_py(texto)
  print()
 
 def carga():
