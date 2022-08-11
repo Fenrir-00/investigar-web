@@ -155,7 +155,7 @@ def menu():
     os.system("clear")
     banner()
     carga()
-    versión()
+    version()
     print(f"{color.morado}    QUE PAGINA TE GUSTARIA INVESTIGAR")
     print("")
     print(f"{color.verde}[1]MANDAR PING")
