@@ -196,6 +196,7 @@ def menu():
     print(f"{color.verde}[3]VER PUERTOS Y SERVICIOS")
     print(f"{color.verde}[4]VER MI IP PUBLICA")
     print(f"{color.verde}[5]BUSCAR SUBDOMINIOS OCULTOS")
+    print(f"{color.verde}[6]VER DISPOSITIVOS EN MI RED WIFI")
     print(f"{color.rojo}[0]SALIR{color.fin}")
     eleccion =input(f"{color.cyan}ELIJE UN NUMERO >>{color.fin} ")
     if eleccion == "1" :
@@ -208,6 +209,8 @@ def menu():
      sacar()
     elif eleccion == "5" :
      sub()
+    elif eleccion == "6" :
+     wifi()
     elif eleccion == "0" :
      banner()
      salir() 
@@ -240,12 +243,12 @@ def ping():
  print(f"{color.morado}QUE QUIERES HACER AHORA{color.fin}")
  print()
  print(f"{color.azul}[1] VOLVER")
- print(f"{color.rojo}[2] SALIR{color.fin}")
+ print(f"{color.rojo}[0] SALIR{color.fin}")
  print()
  var=input(f"{color.cyan}ELIJE UN NUMERO >> {color.fin}")
  if var == "1":
   menu()
- elif var == "2":
+ elif var == "0":
   salir()
  else :
   incorrecto()
