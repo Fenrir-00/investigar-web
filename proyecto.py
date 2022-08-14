@@ -293,12 +293,12 @@ def nmap():
  print(f"{color.morado}QUE QUIERES HACER AHORA{color.fin}")
  print()
  print(f"{color.azul}[1] VOLVER")
- print(f"{color.rojo}[2] SALIR{color.fin}")
+ print(f"{color.rojo}[0] SALIR{color.fin}")
  print()
  var=input(f"{color.cyan}ELIJE UN NUMERO >> {color.fin}")
  if var == "1":
   menu()
- elif var == "2":
+ elif var == "0":
   salir()
  else :
   incorrecto()
@@ -313,12 +313,12 @@ def sacar ():
  print(f"{color.morado}QUE QUIERES HACER AHORA{color.fin}")
  print()
  print(f"{color.azul}[1] VOLVER")
- print(f"{color.rojo}[2] SALIR{color.fin}")
+ print(f"{color.rojo}[0] SALIR{color.fin}")
  print()
  var=input(f"{color.cyan}ELIJE UN NUMERO >> {color.fin}")
  if var == "1":
   menu()
- elif var == "2":
+ elif var == "0":
   salir()
  else :
   incorrecto()
