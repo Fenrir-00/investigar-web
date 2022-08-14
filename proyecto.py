@@ -365,12 +365,40 @@ def sub():
  print(f"{color.morado}QUE QUIERES HACER AHORA{color.fin}")
  print()
  print(f"{color.azul}[1] VOLVER")
- print(f"{color.rojo}[2] SALIR{color.fin}")
+ print(f"{color.rojo}[0] SALIR{color.fin}")
  print()
  var=input(f"{color.cyan}ELIJE UN NUMERO >> {color.fin}")
  if var == "1":
   menu()
- elif var == "2":
+ elif var == "0":
+  salir()
+ else :
+  incorrecto()
+def wifi():
+ os.system("pkg install nmap")
+ banner()
+ os.system(f"nmap 192.168.0.1/24 -oN bueno.txt")
+ banner()
+ print(f"""{color.morado}
+ESTOS SON LOS DISPOSITIVOS EN LA RED""")
+ var2=os.system('grep report bueno.txt >ttl.txt')
+ fd = open("ttl.txt","r")
+ print(f"{color.verde}")
+ leer = fd.read()
+ fd.close()
+ print(leer)
+ print(f"""{color.amarillo}PUEDES TENER MAS INFORMACION PEGANDO LA DIRECCION
+QUE QUIERAS EN EL ESCANEO DE PUERTOS
+""")
+ print(f"{color.morado}QUE QUIERES HACER AHORA{color.fin}")
+ print()
+ print(f"{color.azul}[1] VOLVER")
+ print(f"{color.rojo}[0] SALIR{color.fin}")
+ print()
+ var=input(f"{color.cyan}ELIJE UN NUMERO >> {color.fin}")
+ if var == "1":
+  menu()
+ elif var == "0":
   salir()
  else :
   incorrecto()
