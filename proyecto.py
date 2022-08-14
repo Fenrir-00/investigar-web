@@ -63,7 +63,7 @@ def version():
  texto ="""
  |=======================================================|
  | Script by              : #FENRIR-00                   |
- | Version                : Version  1.2                 |
+ | Version                : Version  1.3                 |
  | Follow me on Github    : https://github.com/Fenrir-00 |
  | Contact me on Telegram : @Ritorito1990                |
  ========================================================= """ 
@@ -187,8 +187,6 @@ def salir():
 
 def menu():
     os.system("clear")
-    banner()
-    carga()
     cabecera()
     version()
     print(f"{color.morado}    QUE PAGINA TE GUSTARIA INVESTIGAR")
