@@ -189,7 +189,7 @@ def menu():
     os.system("clear")
     cabecera()
     version()
-    print(f"{color.morado}    QUE PAGINA TE GUSTARIA INVESTIGAR")
+    print(f"{color.morado}    QUE OPCION TE GUSTARIA INVESTIGAR")
     print("")
     print(f"{color.verde}[1]MANDAR PING")
     print(f"{color.verde}[2]BUSCAR SUBCARPETAS OCULTAS")
