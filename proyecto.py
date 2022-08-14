@@ -25,7 +25,7 @@ class color:
 r= requests.get("https://raw.githubusercontent.com/Fenrir-00/investigar-web/main/version.txt")
 r=r.text
 print(r)
-if r != "version=1.2\n":
+if r != "version=1.3\n":
  os.system("clear")
  print(f"""{color.rojo}HAY UNA NUEVA VERSION ACTUALIZA EL REPOSITORIO
 HAY UNA NUEVA VERSION ACTUALIZA EL REPOSITORIO
