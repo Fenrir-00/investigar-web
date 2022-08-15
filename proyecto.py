@@ -252,6 +252,7 @@ def ping():
   salir()
  else :
   incorrecto()
+
 def ip ():
  os.system("ifconfig &>buenos.txt")
  with open('buenos.txt') as f:
@@ -309,7 +310,9 @@ def nmap():
   salir()
  else :
   incorrecto()
+
 def sacar ():
+ var=ip()
  banner()
  print()
  print(f"{color.verde}ESTA ES TU IP PUBLICA:")
@@ -331,6 +334,7 @@ def sacar ():
   salir()
  else :
   incorrecto()
+
 def sub():
  banner()
  salto = "\n"
@@ -386,6 +390,7 @@ def sub():
   salir()
  else :
   incorrecto()
+
 def wifi():
  os.system("pkg install nmap")
  banner()
