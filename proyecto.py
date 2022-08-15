@@ -194,7 +194,7 @@ def menu():
     print(f"{color.verde}[1]MANDAR PING")
     print(f"{color.verde}[2]BUSCAR SUBCARPETAS OCULTAS")
     print(f"{color.verde}[3]VER PUERTOS Y SERVICIOS")
-    print(f"{color.verde}[4]VER MI IP PUBLICA")
+    print(f"{color.verde}[4]VER MI IP PUBLICA/PRIVADA")
     print(f"{color.verde}[5]BUSCAR SUBDOMINIOS OCULTOS")
     print(f"{color.verde}[6]VER DISPOSITIVOS EN MI RED WIFI")
     print(f"{color.rojo}[0]SALIR{color.fin}")
@@ -316,6 +316,8 @@ def sacar ():
  r= requests.get("https://ident.me")
  r=r.text
  print(f"{color.amarillo}",r,f"{color.fin}")
+ print(f"{color.verde}ESTA ES TU IP PRIVADA:")
+ print(f"{color.amarillo}",var,f"{color.fin}")
  print()
  print(f"{color.morado}QUE QUIERES HACER AHORA{color.fin}")
  print()
