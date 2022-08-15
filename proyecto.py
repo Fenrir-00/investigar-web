@@ -252,6 +252,13 @@ def ping():
   salir()
  else :
   incorrecto()
+def ip ():
+ os.system("ifconfig &>buenos.txt")
+ with open('buenos.txt') as f:
+  data = f.read()
+ resultado = re.search('inet 192.[0-9]+\.[0-9]+\.[0-9]+', data)
+ var3=(resultado.group())
+ return var3
 
 def dirb():
  os.system("pkg install dirb")
@@ -389,7 +396,10 @@ ESTOS SON LOS DISPOSITIVOS EN LA RED""")
  print(f"{color.verde}")
  leer = fd.read()
  fd.close()
- print(leer)
+ print(leer,end="")
+ var= ip()
+ print(f"""{color.cyan}ESTA ES TU DIRECCION IP:{var}
+""")
  print(f"""{color.amarillo}PUEDES TENER MAS INFORMACION PEGANDO LA DIRECCION
 QUE QUIERAS EN EL ESCANEO DE PUERTOS
 """)
