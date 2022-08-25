@@ -345,55 +345,137 @@ def sub():
  print()
  print(f"{color.morado}    BUSCAR SUBDOMINIOS {color.fin}")
  print()
- print("EJEMPLO : google.com")
- url = input(f"{color.cyan}introduce pagina >> {color.fin}")
- fd = open("subdominio.txt","r")
- leer = fd.readlines()
- df =open("buenos.txt","w")
- df.write("")
- df.close()
- df =open("buenos.txt","a")
- contador = 0
- for linea in leer:
-  contador +=1
-  if contador == 200 :
-   print(f"{color.verde} PROBADAS 200 CONTRASEÑAS{color.fin}")
-  if contador == 400 :
-   print(f"{color.verde} PROBADAS 400 CONTRASEÑAS{color.fin}")
-  if contador == 600 :
-   print(f"{color.verde} PROBADAS 600 CONTRASEÑAS{color.fin}")
-  if contador == 800 :
-   print(f"{color.verde} PROBADAS 800 CONTRASEÑAS{color.fin}")
-  var = linea.rstrip("\n")
-  print("https://"+var+"."+url)
-  data = "https://"+var+"."+url
-  try:
-   r= requests.get(data)
-   print(f"{color.amarillo}")
-   print(data)
-   df.write((data) + f"{salto}")
-   print(f"{color.fin}")
-  except:
-   pass
- df.close()
- banner()
- print(f"{color.morado} RESULTADOS OPTENIDOS {color.amarillo}")
- df = open("buenos.txt","r")
- leer = df.read()
- print(leer)
+ print(f"{color.cyan}QUE QUIE TIPO DE SCANEO QUIERES{color.fin}")
  print()
- print(f"{color.morado}QUE QUIERES HACER AHORA{color.fin}")
- print()
- print(f"{color.azul}[1] VOLVER")
+ print(f"{color.azul}[1] ESCANEO RAPIDO")
+ print(f"{color.azul}[2] ESCANEO INTENSO")
  print(f"{color.rojo}[0] SALIR{color.fin}")
  print()
  var=input(f"{color.cyan}ELIJE UN NUMERO >> {color.fin}")
  if var == "1":
-  menu()
+  banner()
+  print()
+  print("EJEMPLO : google.com")
+  url = input(f"{color.cyan}introduce pagina >> {color.fin}")
+  fd = open("subdominio.txt","r")
+  leer = fd.readlines()
+  df =open("buenos.txt","w")
+  df.write("")
+  df.close()
+  df =open("buenos.txt","a")
+  contador = 0
+  for linea in leer:
+   contador +=1
+   if contador == 200 :
+    print(f"{color.verde} PROBADAS 200 DE 1000 CONTRASEÑAS{color.fin}")
+   if contador == 400 :
+    print(f"{color.verde} PROBADAS 400 DE 1000 CONTRASEÑAS{color.fin}")
+   if contador == 600 :
+    print(f"{color.verde} PROBADAS 600 DE 1000 CONTRASEÑAS{color.fin}")
+   if contador == 800 :
+    print(f"{color.verde} PROBADAS 800 DE 1000 CONTRASEÑAS{color.fin}")
+   var = linea.rstrip("\n")
+   print("https://"+var+"."+url)
+   data = "https://"+var+"."+url
+   try:
+    r= requests.get(data)
+    print(f"{color.amarillo}")
+    print(data)
+    df.write((data) + f"{salto}")
+    print(f"{color.fin}")
+   except:
+    pass
+  df.close()
+  banner()
+  print(f"{color.morado} RESULTADOS OPTENIDOS {color.amarillo}")
+  df = open("buenos.txt","r")
+  leer = df.read()
+  print(leer)
+  print()
+  print(f"{color.morado}QUE QUIERES HACER AHORA{color.fin}")
+  print()
+  print(f"{color.azul}[1] VOLVER")
+  print(f"{color.rojo}[0] SALIR{color.fin}")
+  print()
+  var=input(f"{color.cyan}ELIJE UN NUMERO >> {color.fin}")
+  if var == "1":
+   menu()
+  elif var == "0":
+   salir()
+  else :
+   incorrecto()
+ elif var =="2":
+  banner()
+  print()
+  print(f"{color.rojo}EL ESCANEO PUEDE DURAR 2 HORAS{color.fin}")
+  print()
+  print(f"{color.azul}[1] CONTINUAR")
+  print(f"{color.azul}[2] VOLVER")
+  print(f"{color.rojo}[0] SALIR{color.fin}")
+  print()
+  var=input(f"{color.cyan}ELIJE UN NUMERO >> {color.fin}")
+  if var =="1":
+   banner()
+   print()
+   print("EJEMPLO : google.com")
+   url = input(f"{color.cyan}introduce pagina >> {color.fin}")
+   fd = open("subdominio1.txt","r")
+   leer = fd.readlines()
+   df =open("buenos.txt","w")
+   df.write("")
+   df.close()
+   df =open("buenos.txt","a")
+   contador = 0
+   for linea in leer:
+    contador +=1
+    if contador == 2000 :
+     print(f"{color.verde} PROBADAS 2000 de 10000 CONTRASEÑAS{color.fin}")
+    if contador == 4000 :
+     print(f"{color.verde} PROBADAS 4000 de 10000 CONTRASEÑAS{color.fin}")
+    if contador == 6000 :
+     print(f"{color.verde} PROBADAS 6000 de 10000 CONTRASEÑAS{color.fin}")
+    if contador == 8000 :
+     print(f"{color.verde} PROBADAS 8000 de 1000  CONTRASEÑAS{color.fin}")
+    var = linea.rstrip("\n")
+    print("https://"+var+"."+url)
+    data = "https://"+var+"."+url
+    try:
+     r= requests.get(data)
+     print(f"{color.amarillo}")
+     print(data)
+     df.write((data) + f"{salto}")
+     print(f"{color.fin}")
+    except:
+     pass
+   df.close()
+   banner()
+   print(f"{color.morado} RESULTADOS OPTENIDOS {color.amarillo}")
+   df = open("buenos.txt","r")
+   leer = df.read()
+   print(leer)
+   print()
+   print(f"{color.morado}QUE QUIERES HACER AHORA{color.fin}")
+   print()
+   print(f"{color.azul}[1] VOLVER")
+   print(f"{color.rojo}[0] SALIR{color.fin}")
+   print()
+   var=input(f"{color.cyan}ELIJE UN NUMERO >> {color.fin}")
+   if var == "1":
+    menu()
+   elif var == "0":
+    salir()
+   else :
+    incorrecto()
+  elif var =="2":
+   sub()
+  elif var == "0":
+   salir()
+  else :
+   incorrecto()
  elif var == "0":
   salir()
  else :
-  incorrecto()
+   incorrecto()
 
 def wifi():
  os.system("pkg install nmap")
