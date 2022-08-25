@@ -435,7 +435,7 @@ def sub():
     if contador == 6000 :
      print(f"{color.verde} PROBADAS 6000 de 10000 CONTRASEÑAS{color.fin}")
     if contador == 8000 :
-     print(f"{color.verde} PROBADAS 8000 de 1000  CONTRASEÑAS{color.fin}")
+     print(f"{color.verde} PROBADAS 8000 de 10000  CONTRASEÑAS{color.fin}")
     var = linea.rstrip("\n")
     print("https://"+var+"."+url)
     data = "https://"+var+"."+url
