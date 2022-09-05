@@ -264,17 +264,82 @@ def ip ():
 def dirb():
  os.system("pkg install dirb")
  banner()
+ salto = "\n"
  print()
- print(f"{color.morado}QUE SUBCARPETAS QUEIRES INVESTIGAR{color.fin}")
+ print(f"{color.morado}    BUSCAR DIRECTORIOS {color.fin}")
  print()
- print(f"{color.amarillo}EJEMPLO HTTPS://WWW.GOOGLE.ES{color.fin}")
+ print(f"{color.cyan}QUE QUIE TIPO DE SCANEO QUIERES{color.fin}")
  print()
- var1=input(f"{color.cyan}INTRODUCE LA PAGINA >> {color.fin}")
- banner()
+ print(f"{color.verde}[1] ESCANEO RAPIDO")
+ print(f"{color.azul}[2] ESCANEO INTENSO")
+ print(f"{color.rojo}[0] SALIR{color.fin}")
  print()
- print(f"{color.amarillo}TEN PACIENCIA ESTO PUEDE TARDAR UNOS MINUTOS{color.fin}")
- time.sleep(3)
- os.system(f"dirb {var1}")
+ var=input(f"{color.cyan}ELIJE UN NUMERO >> {color.fin}")
+ if var == "1":
+  banner()
+  print(f"{color.amarillo}EJEMPLO HTTPS://WWW.GOOGLE.ES{color.fin}")
+  print()
+  var1=input(f"{color.cyan}INTRODUCE LA PAGINA >> {color.fin}")
+  banner()
+  print()
+  print(f"{color.amarillo}TEN PACIENCIA ESTO PUEDE TARDAR VEINTE MINUTOS{color.fin}")
+  time.sleep(3)
+  os.system(f"dirb {var1} small.txt -r")
+  print(f"{color.morado}QUE QUIERES HACER AHORA{color.fin}")
+  print()
+  print(f"{color.azul}[1] VOLVER")
+  print(f"{color.rojo}[0] SALIR{color.fin}")
+  print()
+  var=input(f"{color.cyan}ELIJE UN NUMERO >> {color.fin}")
+  if var == "1":
+   menu()
+  elif var == "0":
+   salir()
+  else :
+   incorrecto()
+ elif var =="2":
+  banner()
+  print()
+  print(f"{color.rojo}EL ESCANEO PUEDE DURAR 2 HORAS{color.fin}")
+  print()
+  print(f"{color.verde}[1] CONTINUAR")
+  print(f"{color.azul}[2] VOLVER")
+  print(f"{color.rojo}[0] SALIR{color.fin}")
+  print()
+  var=input(f"{color.cyan}ELIJE UN NUMERO >> {color.fin}")
+  if var =="1":
+   banner()
+   print(f"{color.amarillo}EJEMPLO HTTPS://WWW.GOOGLE.ES{color.fin}")
+   print()
+   var1=input(f"{color.cyan}INTRODUCE LA PAGINA >> {color.fin}")
+   banner()
+   print()
+   print(f"{color.amarillo}TEN PACIENCIA ESTO VA A TARDAR UN RATO{color.fin}")
+   time.sleep(3)
+   os.system(f"dirb {var1} common.txt -r")
+   print(f"{color.morado}QUE QUIERES HACER AHORA{color.fin}")
+   print()
+   print(f"{color.azul}[1] VOLVER")
+   print(f"{color.rojo}[0] SALIR{color.fin}")
+   print()
+   var=input(f"{color.cyan}ELIJE UN NUMERO >> {color.fin}")
+   if var == "1":
+    menu()
+   elif var == "0":
+     salir()
+   else :
+    incorrecto()
+  elif var=="2":
+   menu()
+  elif var =="0":
+   salir()
+  else:
+   incorrecto()
+ elif var =="0":
+  salir()
+ else:
+  incorrecto()
+
 def nmap():
  os.system("pkg install nmap")
  banner()
