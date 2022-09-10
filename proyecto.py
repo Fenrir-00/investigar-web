@@ -266,7 +266,7 @@ def dirb():
  banner()
  salto = "\n"
  print()
- print(f"{color.morado}    BUSCAR SUBDOMINIOS {color.fin}")
+ print(f"{color.morado}    BUSCAR DIRECTORIOS {color.fin}")
  print()
  print(f"{color.cyan}QUE QUIE TIPO DE SCANEO QUIERES{color.fin}")
  print()
