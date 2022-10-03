@@ -18,4 +18,4 @@ python3 proyecto.py
 
 # uso por comandos 
 
-phyton proyecto.py -h
+python proyecto.py -h
