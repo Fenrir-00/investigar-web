@@ -15,3 +15,7 @@ cd investigar-web
 ```bash
 python3 proyecto.py
 ```
+
+# uso por comandos 
+
+phyton proyecto.py -h
