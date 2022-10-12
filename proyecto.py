@@ -995,6 +995,16 @@ def sacar1 ():
   print(f"{color.rojo}NO ESTAS CONECTADO A WIFI{color.fin}")
  print()
 
+def regis1(var):                                                                                           try:
+  r=whois.whois(f'{var}')                                                                                   banner()
+  print()                                                                                                   print(f"{color.morado}INFORMACION OBTENIDA")
+  print(f"{color.verde}")
+  print(r.text)
+  print(f"""
+         {color.rojo} QUITAR ZOOM PARA LEER MEJOR{color.fin}
+""")
+ except:
+   ayuda()
 
 def ayuda():
  os.system("clear")
@@ -1020,6 +1030,7 @@ def ayuda():
   [-I] para ver ip publica/privada
   [-A] pra hacer un ping
   [-W] para ver dispositivos en mi red
+  [-F] para ver registro de dominio
 
  ejemplos: python proyecto.py -S -R pagina.com
  ejemplos: python proyecto.py -C -R https://pagina.com
@@ -1027,6 +1038,7 @@ def ayuda():
  ejemplos: python proyecto.py -I
  ejemplos: python proyecto.py -A pagina.com
  ejemplos: python proyecto.py -W
+ ejemplos: python proyecto.py -F pagina.com
 """)
 arg=sys.argv
 try:
@@ -1051,6 +1063,8 @@ else:
     sacar1() 
   elif "-W" in arg:
     wifi1()   
+  elif "-F" in arg:
+   regis1(arg2)
   elif "-A" in arg:
     try:
       ping1(arg2)
