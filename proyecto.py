@@ -993,11 +993,14 @@ def sacar1 ():
  except:
   print(f"{color.verde}ESTA ES TU IP PRIVADA:")
   print(f"{color.rojo}NO ESTAS CONECTADO A WIFI{color.fin}")
- print()
+  print()
 
-def regis1(var):                                                                                           try:
-  r=whois.whois(f'{var}')                                                                                   banner()
-  print()                                                                                                   print(f"{color.morado}INFORMACION OBTENIDA")
+def regis1(var):                                                                                          
+ try:
+  r=whois.whois(f'{var}')                                                                                   
+  banner()
+  print()                                                                                                   
+  print(f"{color.morado}INFORMACION OBTENIDA")
   print(f"{color.verde}")
   print(r.text)
   print(f"""
