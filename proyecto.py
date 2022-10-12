@@ -281,9 +281,7 @@ def regis():
   r=whois.whois(f'{var}')
   banner()
   print()
-  print()
   print(f"{color.morado}INFORMACION OBTENIDA")
-  print()
   print(f"{color.verde}")
   print(r.text)
   print(f"""
