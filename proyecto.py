@@ -12,6 +12,13 @@ while True:
  except ModuleNotFoundError:
   os.system("pip install lolpython")
 
+while True:
+ try:
+  import whois
+  break
+ except:
+  os.system("pip install python-whois")
+
 class color:
     morado = '\033[95m'
     blanco = '\033[97m'
@@ -196,6 +203,7 @@ def menu():
     print(f"{color.verde}[4]VER MI IP PUBLICA/PRIVADA")
     print(f"{color.verde}[5]BUSCAR SUBDOMINIOS OCULTOS")
     print(f"{color.verde}[6]VER DISPOSITIVOS EN MI RED WIFI")
+    print(f"{color.verde}[7]VER REGISTRO DE DOMINIOS")
     print(f"{color.rojo}[0]SALIR{color.fin}")
     eleccion =input(f"{color.cyan}ELIJE UN NUMERO >>{color.fin} ")
     if eleccion == "1" :
@@ -210,6 +218,8 @@ def menu():
      sub()
     elif eleccion == "6" :
      wifi()
+    elif eleccion == "7" :
+     regis()
     elif eleccion == "0" :
      banner()
      salir() 
@@ -259,6 +269,38 @@ def ip ():
  resultado = re.search('inet 192.[0-9]+\.[0-9]+\.[0-9]+', data)
  var3=(resultado.group())
  return var3
+
+def regis():
+ banner()
+ print(f"{color.morado} QUE REGISTRO DE DOMINIO QUIERES VER")
+ print()
+ print(f"{color.amarillo}EJEMPLO GOOGLE.ES    {color.rojo}NO PONER HTTP://WWW.{color.fin}")
+ print()
+ var=input(f"{color.cyan}INTRODUCE LA DIRECCION >> {color.fin}")
+ try:
+  r=whois.whois(f'{var}')
+  banner()
+  print()
+  print(f"{color.morado}INFORMACION OBTENIDA")
+  print(f"{color.verde}")
+  print(r.text)
+  print(f"""
+         {color.rojo} QUITAR ZOOM PARA LEER MEJOR{color.fin}
+""")
+  print(f"{color.morado}QUE QUIERES HACER AHORA{color.fin}")
+  print()
+  print(f"{color.azul}[1] VOLVER")
+  print(f"{color.rojo}[0] SALIR{color.fin}")
+  print()
+  var=input(f"{color.cyan}ELIJE UN NUMERO >> {color.fin}")
+  if var == "1":
+   menu()
+  elif var == "0":
+   salir()
+  else :
+   incorrecto()
+ except:
+  incorrecto()
 
 
 def dirb():
