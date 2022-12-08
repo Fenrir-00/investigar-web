@@ -31,7 +31,7 @@ class color:
 
 r= requests.get("https://raw.githubusercontent.com/Fenrir-00/investigar-web/main/version.txt")
 r=r.text
-if r != "version=2.0\n":
+if r != "version=2.1\n":
  os.system("clear")
  print(f"""{color.rojo}HAY UNA NUEVA VERSION ACTUALIZA EL REPOSITORIO
 HAY UNA NUEVA VERSION ACTUALIZA EL REPOSITORIO
@@ -69,7 +69,7 @@ def version():
  texto ="""
  |=======================================================|
  | Script by              : #FENRIR-00                   |
- | Version                : Version  2.0                 |
+ | Version                : Version  2.1                 |
  | Follow me on Github    : https://github.com/Fenrir-00 |
  | Contact me on Telegram : @Ritorito1990                |
  ========================================================= """ 
@@ -204,6 +204,7 @@ def menu():
     print(f"{color.verde}[5]BUSCAR SUBDOMINIOS OCULTOS")
     print(f"{color.verde}[6]VER DISPOSITIVOS EN MI RED WIFI")
     print(f"{color.verde}[7]VER REGISTRO DE DOMINIOS")
+    print(f"{color.verde}[8]CREAR EMAIL TEMPORAL")
     print(f"{color.rojo}[0]SALIR{color.fin}")
     eleccion =input(f"{color.cyan}ELIJE UN NUMERO >>{color.fin} ")
     if eleccion == "1" :
@@ -220,6 +221,8 @@ def menu():
      wifi()
     elif eleccion == "7" :
      regis()
+    elif eleccion == "8" :
+      email()
     elif eleccion == "0" :
      banner()
      salir() 
@@ -709,6 +712,9 @@ QUE QUIERAS EN EL ESCANEO DE PUERTOS
  else :
   incorrecto()
 
+def email():
+ os.system("termux-open-url https://temp-mail.org/es/")
+ menu()
 
 ###############################################################################################################################################
 ###############################################################################################################################################
