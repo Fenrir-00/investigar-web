@@ -722,10 +722,12 @@ def wifi():
        incorrecto()
 
 def wifiusu(i):
+  l =ip()
+  l=l[8]
   if sistema =="Windows":
-   comando ="ping 192.168.0."+str(i)
+   comando =f"ping 192.168.{l}."+str(i)
   else:
-    comando ="ping -c2 192.168.0."+str(i)
+    comando =f"ping -c2 192.168.{l}."+str(i)
   pitido = os.popen(comando).read()
   if "bytes=32"  in pitido or "64 bytes" in pitido:
    print("192.168.0."+str(i))  
