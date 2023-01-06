@@ -694,6 +694,7 @@ def wifi():
  cabecera()
  version() 
  var3 = ip()
+ l = var3[8]
  print(f"""{color.verde}
  INICIANDO ESCANEO TU IP ES {var3}
  {color.amarillo} """)
@@ -703,7 +704,7 @@ def wifi():
   """)
  else:
     for i in range(1,254):
-     run =threading.Thread(target=wifiusu, args={i},)
+     run =threading.Thread(target=wifiusu, args=(i,l),)
      run.start()
      time.sleep(0.3)
      if i == 253:
@@ -721,9 +722,7 @@ def wifi():
       else :
        incorrecto()
 
-def wifiusu(i):
-  l =ip()
-  l=l[8]
+def wifiusu(i,l):
   if sistema =="Windows":
    comando =f"ping 192.168.{l}."+str(i)
   else:
