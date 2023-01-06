@@ -729,7 +729,7 @@ def wifiusu(i,l):
     comando =f"ping -c2 192.168.{l}."+str(i)
   pitido = os.popen(comando).read()
   if "bytes=32"  in pitido or "64 bytes" in pitido:
-   print("192.168.0."+str(i))  
+   print(f"192.168.{l}."+str(i))  
  
   
 
