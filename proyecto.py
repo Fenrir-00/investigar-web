@@ -76,7 +76,7 @@ def version():
  texto ="""
  |=======================================================|
  | Script by              : #FENRIR-00                   |
- | Version                : Version  2.1                 |
+ | Version                : Version  2.2                 |
  | Follow me on Github    : https://github.com/Fenrir-00 |
  | Contact me on Telegram : @Ritorito1990                |
  ========================================================= """ 
