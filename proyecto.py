@@ -328,7 +328,7 @@ def dirb():
   cabecera()
   version()
   print()
-  print("EJEMPLO : https://google.com")
+  print("EJEMPLO : https://www.google.com")
   url = input(f"{color.cyan}introduce pagina >> {color.fin}")
   fd = open("small.txt","r")
   leer = fd.readlines()
