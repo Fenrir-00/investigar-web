@@ -210,17 +210,14 @@ def menu():
     else:
         incorrecto()
 
-def ping():
- cabecera()
+def ping():                                                                                      cabecera()
  version()
  print()
  print(f"{color.morado}QUE PAGINA QUEIRES HACER PING{color.fin}")
  print()
- print(f"{color.amarillo}EJEMPLO GOOGLE.ES    {color.rojo}NO PONER HTTP://WWW.{color.fin}")
- print()
+ print(f"{color.amarillo}EJEMPLO GOOGLE.ES    {color.rojo}NO PONER HTTP://WWW.{color.fin}")      print()
  var=input(f"{color.cyan}INTRODUCE LA DIRECCION >> {color.fin}")
- if sistema == "Linux":
-   os.system(f"ping -c 1 {var} >ttl.txt")
+ if sistema == "Linux":                                                                            os.system(f"ping -c 1 {var} >ttl.txt")
  if sistema == "Windows":
   os.system(f"ping  {var} >ttl.txt")
  f = open("ttl.txt","r")
@@ -240,13 +237,14 @@ def ping():
  cabecera()
  version()
  print(f"""
-{color.verde}INFORMACION OBTENIDA
-""")
- print(f"{color.amarillo}ESTE ES EL " + (ttl),maquina)
+{color.verde}        INFORMACION OBTENIDA
+""")                                                                                             print(f"{color.azul}[✓]PAGINA ESCANEADA: {color.verde}{var}")
+ print(f"{color.azul}[✓]ESTE ES EL: {color.verde}" + (ttl))
+ print(f"{color.azul}[✓]TIPO DE MAQUINA: {color.verde}{maquina}")
  if sistema =="Linux":
-  print(f"ESTA ES LA DIRECCION WEB: (" + (direccion))
+  print(f"{color.azul}[✓]ESTA ES LA DIRECCION WEB: {color.verde}(" + (direccion))
  if sistema =="Windows":
-  print(f"ESTA ES LA DIRECCION WEB: [" + (direccion))
+  print(f"{color.azul}[✓]ESTA ES LA DIRECCION WEB: {color.verde}[" + (direccion))
  print(f"""
 {color.morado}QUE QUIERES HACER AHORA{color.fin}
 """)
@@ -259,8 +257,7 @@ def ping():
  elif var == "0":
   salir()
  else :
-  incorrecto
-
+  incorrecto()
 
 def ip():
  if sistema == "Linux":
