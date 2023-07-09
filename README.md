@@ -1,4 +1,4 @@
-![Screenshot](investigar.png)
+![Screenshot](datos/investigar.png)
 ![Screenshot](datos/ping.png)
 # instalación
 ``` bash
