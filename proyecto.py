@@ -503,7 +503,7 @@ def nmap():
  leer = fd.read()
  fd.close()
  print()
- print(f"{color.morado}ESTON SON LOS PUERTOS DESCUBIERTOS{color.amarillo}")
+ print(f"{color.morado}ESTON SON LOS PUERTOS DESCUBIERTOS PARA: {var1}{color.amarillo}")
  print()
  print("PORT     STATE   SERVICE       VERSION")
  print(leer) 
