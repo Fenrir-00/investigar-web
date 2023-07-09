@@ -1,4 +1,5 @@
 ![Screenshot](investigar.png)
+![Screenshot](datos/ping.png)
 # instalación
 ``` bash
 pkg install git
