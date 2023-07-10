@@ -123,8 +123,8 @@ def incorrecto():
 ██╔══╝  ██║  ██╗   ██║   ██╔══██║
 ███████╗╚█████╔╝   ██║   ██║  ██║
 ╚══════╝ ╚════╝    ╚═╝   ╚═╝  ╚═╝{color.fin}""")
-    time.sleep(4)
-    menu()
+  time.sleep(4)
+  menu()
 
 def salir():
     subprocess.call(limpieza, shell=True) 
