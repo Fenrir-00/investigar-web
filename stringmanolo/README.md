@@ -5,7 +5,8 @@ Permite ejecutar el programa sin anteponer python3
 Permite aislar versiones de dependencias del programa de versiones de paquetes que tenga instalado el sistema
 - Añade gestion real de dependencias con el requeriments.txt
 - Remplaza llamados directas sin control al os por llamadas seguras para limpiar pantalla 
-
+- Corrige la función ping  
+Estaba creando ficheros temporales y leyéndolos usando llamadas inseguras en lugar de simplemente obtener el output del comando como retorno a una variable
 
 # TODO
 - Autoinstalar el programa como comando

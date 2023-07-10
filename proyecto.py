@@ -190,54 +190,45 @@ def menu():
     else:
         incorrecto()
 
-def ping():                                                                                      
- cabecera()
- version()
- var = input(f"""
-{color.morado}QUE PAGINA QUEIRES HACER PING{color.fin}
 
-{color.amarillo}EJEMPLO GOOGLE.ES    {color.rojo}NO PONER HTTP://WWW.{color.fin} 
- 
+def ping():
+  cabecera()
+  version()
+  var = input(f"\n{color.morado}QUÉ PÁGINA QUIERES HACER PING{color.fin}\n\n{color.amarillo}EJEMPLO: GOOGLE.ES\n{color.rojo}NO PONER HTTP://WWW.{color.fin}\n\n{color.cyan}INTRODUCE LA DIRECCIÓN >> {color.fin}")
 
-{color.cyan}INTRODUCE LA DIRECCION >> {color.fin}""")
- if sistema == "Linux":                                                                            
-  os.system(f"ping -c 1 {var} >ttl.txt")
- if sistema == "Windows":
-  os.system(f"ping  {var} >ttl.txt")
- f = open("ttl.txt","r")
- leer = f.read()
- f.close()
- if sistema == "Linux":
-  ttl = re.search('ttl=\S*', leer)
- if sistema =="Windows":
-  ttl = re.search('TTL=\S*', leer)
- ttl =ttl.group()
- direccion = re.search("[0-9]\S*",leer)
- direccion= direccion.group()
- if int(ttl[4:7]) > 65:
-  maquina = "WINDOWS"
- else:
-  maquina ="LINUX"
- cabecera()
- version()
- var = input(f"""
-{color.verde}        INFORMACION OBTENIDA
-\n{color.azul}[✓]PAGINA ESCANEADA: {color.verde}{var}
-{color.azul}[✓]ESTE ES EL: {color.verde}{ttl}
-{color.azul}[✓]TIPO DE MAQUINA: {color.verde}{maquina}
-{color.azul}[✓]ESTA ES LA DIRECCION WEB: {color.verde}{("(" + direccion) if sistema == "Linux" else "[" + direccion}
-\n{color.morado}QUE QUIERES HACER AHORA{color.fin}
-\n{color.azul}[1] VOLVER
-{color.rojo}[0] SALIR{color.fin}
+  if sistema == "Linux":
+    result = subprocess.run(['ping', '-c', '1', var], capture_output=True, text=True)
+  elif sistema == "Windows":
+    result = subprocess.run(['ping', var], capture_output=True, text=True)
+  else:
+    incorrecto()
 
-{color.cyan}ELIJE UN NUMERO >> {color.fin}""")
+  if result.returncode == 0:
+    output = result.stdout
+    ttl = re.search('ttl=\S*', output)
+    ttl = ttl.group()
+    direccion = re.search("[0-9]\S*", output)
+    direccion = direccion.group()
 
- if var == "1":
-  menu()
- elif var == "0":
-  salir()
- else :
-  incorrecto()
+    if int(ttl[4:7]) > 65:
+      maquina = "WINDOWS"
+    else:
+      maquina = "LINUX"
+
+    cabecera()
+    version()
+    var = input(f"\n{color.verde}INFORMACIÓN OBTENIDA\n\n{color.azul}[✓]PÁGINA ESCANEADA: {color.verde}{var}\n{color.azul}[✓]ESTE ES EL: {color.verde}{ttl}\n{color.azul}[✓]TIPO DE MÁQUINA: {color.verde}{maquina}\n{color.azul}[✓]ESTA ES LA DIRECCIÓN WEB: {color.verde}({direccion}\n\n{color.morado}QUÉ QUIERES HACER AHORA{color.fin}\n\n{color.azul}[1] VOLVER\n{color.rojo}[0] SALIR{color.fin}\n\n{color.cyan}ELIGE UN NÚMERO >> {color.fin}")
+
+    if var == "1":
+      menu()
+    elif var == "0":
+      salir()
+    else:
+      incorrecto()
+  else:
+    print(f"Error al hacer ping a {var}.")
+
+
 
 def ip():
  if sistema == "Linux":
