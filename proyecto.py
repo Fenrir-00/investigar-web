@@ -54,13 +54,13 @@ class color:
 r= requests.get("https://raw.githubusercontent.com/Fenrir-00/investigar-web/main/version.txt")
 r=r.text
 if r != "version=2.3\n":
- os.system(f"{limpieza}")
+ subprocess.call(limpieza, shell=True) 
  print((color.rojo + ('HAY UNA NUEVA VERSION ACTUALIZA EL REPOSITORIO\n') * 20))
  time.sleep(5)
 
 def banner():
- os.system(f"{limpieza}")
- print(f"""{color.cyan}
+  subprocess.call(limpieza, shell=True) 
+  print(f"""{color.cyan}
 ███████╗███████╗███╗  ██╗██████╗ ██╗██████╗
 ██╔════ ██╔════╝████╗ ██║██╔══██╗██║██╔══██╗
 █████╗  █████╗  ██╔██╗██║██████╔╝██║██████╔╝
@@ -91,8 +91,8 @@ def version():
    colorverde(texto)      
 
 def cabecera():
- os.system(f"{limpieza}")
- print(f"""{color.cyan}
+  subprocess.call(limpieza, shell=True) 
+  print(f"""{color.cyan}
 
  ██╗       ██╗███████╗██████╗  ██████╗░█████╗  █████╗ ███╗  ██╗
  ██║  ██╗  ██║██╔════╝██╔══██╗██╔════╝██╔══██╗██╔══██╗████╗ ██║
@@ -103,8 +103,8 @@ def cabecera():
 
 
 def incorrecto():
-    os.system(f"{limpieza}")
-    print(f"""{color.rojo}
+  subprocess.call(limpieza, shell=True)  
+  print(f"""{color.rojo}
  █████╗ ██████╗  █████╗ ██╗ █████╗ ███╗  ██╗
 ██╔══██╗██╔══██╗██╔══██╗██║██╔══██╗████╗ ██║
 ██║  ██║██████╔╝██║  ╚═╝██║██║  ██║██╔██╗██║
@@ -127,48 +127,48 @@ def incorrecto():
     menu()
 
 def salir():
-    os.system(f"{limpieza}")
+    subprocess.call(limpieza, shell=True) 
     banner()
     print(f"{color.rojo}")
     print("""SALIENDO…
     █▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒""")
     time.sleep(1)
-    os.system(f"{limpieza}")
+    subprocess.call(limpieza, shell=True) 
     banner()
     print(f"{color.rojo}")
     print("""SALIENDO…10%
     ███▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒""")
     time.sleep(1)
-    os.system(f"{limpieza}")
+    subprocess.call(limpieza, shell=True) 
     banner()
     print(f"{color.rojo}")
     print("""SALIENDO…30%
     █████▒▒▒▒▒▒▒▒▒▒▒▒▒▒""")
     time.sleep(1)
-    os.system(f"{limpieza}")
+    subprocess.call(limpieza, shell=True) 
     banner()
     print(f"{color.rojo}")
     print("""SALIENDO…50%
     ██████████▒▒▒▒▒▒▒▒▒""")
     time.sleep(1)
-    os.system(f"{limpieza}")
+    subprocess.call(limpieza, shell=True) 
     banner()
     print(f"{color.rojo}")
     print("""SALIENDO…70%
     █████████████▒▒▒▒▒▒""")
     time.sleep(1)
-    os.system(f"{limpieza}")
+    subprocess.call(limpieza, shell=True) 
     banner()
     print(f"{color.rojo}")
     print("""SALIENDO…100%
     ███████████████████""")
     time.sleep(1)
-    os.system(f"{limpieza}")
+    subprocess.call(limpieza, shell=True)    
     print(f"{color.fin}")
     
 
 def menu():
-    os.system(f"{limpieza}")
+    subprocess.call(limpieza, shell=True) 
     cabecera()
     version()
     eleccion =input(f"""{color.morado}    QUE OPCION TE GUSTARIA INVESTIGAR
@@ -208,12 +208,13 @@ def menu():
 def ping():                                                                                      
  cabecera()
  version()
- print()
- print(f"{color.morado}QUE PAGINA QUEIRES HACER PING{color.fin}")
- print()
- print(f"{color.amarillo}EJEMPLO GOOGLE.ES    {color.rojo}NO PONER HTTP://WWW.{color.fin}")      
- print()
- var=input(f"{color.cyan}INTRODUCE LA DIRECCION >> {color.fin}")
+ var = input(f"""
+{color.morado}QUE PAGINA QUEIRES HACER PING{color.fin}
+
+{color.amarillo}EJEMPLO GOOGLE.ES    {color.rojo}NO PONER HTTP://WWW.{color.fin} 
+ 
+
+{color.cyan}INTRODUCE LA DIRECCION >> {color.fin}""")
  if sistema == "Linux":                                                                            
   os.system(f"ping -c 1 {var} >ttl.txt")
  if sistema == "Windows":
@@ -1041,7 +1042,7 @@ def regis1(var):
    ayuda()
 
 def ayuda():
- os.system(f"{limpieza}")
+ subprocess.call(limpieza, shell=True)
  print("""
  |=======================================================|
  | Script by              : #FENRIR-00                   |
