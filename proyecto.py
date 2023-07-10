@@ -220,23 +220,18 @@ def ping():
   maquina ="LINUX"
  cabecera()
  version()
- print(f"""
+ var = input(f"""
 {color.verde}        INFORMACION OBTENIDA
-""")                                                                                             
- print(f"{color.azul}[✓]PAGINA ESCANEADA: {color.verde}{var}")
- print(f"{color.azul}[✓]ESTE ES EL: {color.verde}" + (ttl))
- print(f"{color.azul}[✓]TIPO DE MAQUINA: {color.verde}{maquina}")
- if sistema =="Linux":
-  print(f"{color.azul}[✓]ESTA ES LA DIRECCION WEB: {color.verde}(" + (direccion))
- if sistema =="Windows":
-  print(f"{color.azul}[✓]ESTA ES LA DIRECCION WEB: {color.verde}[" + (direccion))
- print(f"""
-{color.morado}QUE QUIERES HACER AHORA{color.fin}
-""")
- print(f"{color.azul}[1] VOLVER")
- print(f"{color.rojo}[0] SALIR{color.fin}")
- print()
- var=input(f"{color.cyan}ELIJE UN NUMERO >> {color.fin}")
+\n{color.azul}[✓]PAGINA ESCANEADA: {color.verde}{var}
+{color.azul}[✓]ESTE ES EL: {color.verde}{ttl}
+{color.azul}[✓]TIPO DE MAQUINA: {color.verde}{maquina}
+{color.azul}[✓]ESTA ES LA DIRECCION WEB: {color.verde}{("(" + direccion) if sistema == "Linux" else "[" + direccion}
+\n{color.morado}QUE QUIERES HACER AHORA{color.fin}
+\n{color.azul}[1] VOLVER
+{color.rojo}[0] SALIR{color.fin}
+
+{color.cyan}ELIJE UN NUMERO >> {color.fin}""")
+
  if var == "1":
   menu()
  elif var == "0":

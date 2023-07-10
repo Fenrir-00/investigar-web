@@ -10,4 +10,5 @@ Permite aislar versiones de dependencias del programa de versiones de paquetes q
 # TODO
 - Autoinstalar el programa como comando
 - Cambiar multiples llamadas consecutivas de printf for unica llamada
+- Remplazar funciones que llaman a print por retorno de texto
 - Lintea/identa/estila siguiendo convenciones 
