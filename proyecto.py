@@ -5,19 +5,32 @@ from colores import colorverde,colorazul,colorclasic,colormorado,colornaraja,col
 import random
 import platform
 import threading
-while True:
- try:
-  import requests
-  break
- except ModuleNotFoundError:
-  os.system("pip install requests")
+import subprocess
 
-while True:
- try:
-  import whois
-  break
- except:
-  os.system("pip install python-whois")
+import requests
+import whois
+
+# Verificar si las dependencias están instaladas
+def check_dependencies():
+  try:
+    import requests
+    import whois
+    print("Las dependencias están instaladas correctamente.")
+  except ImportError as e:
+    print(f"Error al importar una o más dependencias: {e}")
+    install_dependencies()
+
+# Instalar las dependencias desde requirements.txt
+def install_dependencies():
+  try:
+    subprocess.check_call(['pip', 'install', '-r', 'requirements.txt'])
+    print("Las dependencias se han instalado correctamente.")
+  except subprocess.CalledProcessError as e:
+    print(f"Error al instalar las dependencias: {e}")
+    exit(1)
+
+# Verificar las dependencias
+check_dependencies()
 
   
 sistema = platform.system()

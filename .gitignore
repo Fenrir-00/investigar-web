@@ -1,0 +1,12 @@
+# Ignorar el entorno virtual
+investigar_web_env/
+
+# Ignorar archivos generados por Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorar archivos de dependencias
+*.txt
+
