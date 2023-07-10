@@ -311,7 +311,7 @@ def dirb():
   print()
   print("EJEMPLO : https://www.google.com")
   url = input(f"{color.cyan}introduce pagina >> {color.fin}")
-  fd = open("small.txt","r")
+  fd = open("dic/small.txt","r")
   leer = fd.readlines()
   df =open("buenos.txt","w")
   df.write("")
@@ -390,7 +390,7 @@ def dirb():
    print()
    print("EJEMPLO : https://www.google.com")
    url = input(f"{color.cyan}introduce pagina >> {color.fin}")
-   fd = open("common.txt","r")
+   fd = open("dic/common.txt","r")
    leer = fd.readlines()
    df =open("buenos.txt","w")
    df.write("")
@@ -547,7 +547,7 @@ def sub():
   print()
   print("EJEMPLO : google.com")
   url = input(f"{color.cyan}introduce pagina >> {color.fin}")
-  fd = open("subdominio.txt","r")
+  fd = open("dic/subdominio.txt","r")
   leer = fd.readlines()
   df =open("buenos.txt","w")
   df.write("")
@@ -613,7 +613,7 @@ def sub():
    print()
    print("EJEMPLO : google.com")
    url = input(f"{color.cyan}introduce pagina >> {color.fin}")
-   fd = open("subdominio1.txt","r")
+   fd = open("dic/subdominio1.txt","r")
    leer = fd.readlines()
    df =open("buenos.txt","w")
    df.write("")
@@ -808,7 +808,7 @@ def dirb1(dic,url):
  if dic == "-R":
  
   url = url
-  fd = open("small.txt","r")
+  fd = open("dic/small.txt","r")
   leer = fd.readlines()
   df =open("buenos.txt","w")
   df.write("")
@@ -859,7 +859,7 @@ def dirb1(dic,url):
  
   if "1" =="1":
    url = url
-   fd = open("common.txt","r")
+   fd = open("dic/common.txt","r")
    leer = fd.readlines()
    df =open("buenos.txt","w")
    df.write("")
@@ -917,7 +917,7 @@ def sub1(dic,url):
   print()
   print("EJEMPLO : google.com")
   url = url
-  fd = open("subdominio.txt","r")
+  fd = open("dic/subdominio.txt","r")
   leer = fd.readlines()
   df =open("buenos.txt","w")
   df.write("")
@@ -955,7 +955,7 @@ def sub1(dic,url):
  elif dic =="-L":
   if "1" =="1":
    url = url
-   fd = open("subdominio1.txt","r")
+   fd = open("dic/subdominio1.txt","r")
    leer = fd.readlines()
    df =open("buenos.txt","w")
    df.write("")
