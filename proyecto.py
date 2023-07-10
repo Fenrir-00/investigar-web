@@ -126,46 +126,31 @@ def incorrecto():
   time.sleep(4)
   menu()
 
+
 def salir():
-    subprocess.call(limpieza, shell=True) 
-    banner()
+  subprocess.call(limpieza, shell=True)
+  banner()
+
+  progress = [0, 10, 30, 50, 70, 100]
+  bar_length = 20  # Longitud fija de la barra de progreso
+
+  for i in range(len(progress) - 1):
     print(f"{color.rojo}")
-    print("""SALIENDO…
-    █▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒""")
+    print(f"SALIENDO…{progress[i]}%")
+    completed = progress[i] // (100 // bar_length)
+    remaining = bar_length - completed
+    print("█" * completed + "▒" * remaining)
     time.sleep(1)
-    subprocess.call(limpieza, shell=True) 
+    subprocess.call(limpieza, shell=True)
     banner()
-    print(f"{color.rojo}")
-    print("""SALIENDO…10%
-    ███▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒""")
-    time.sleep(1)
-    subprocess.call(limpieza, shell=True) 
-    banner()
-    print(f"{color.rojo}")
-    print("""SALIENDO…30%
-    █████▒▒▒▒▒▒▒▒▒▒▒▒▒▒""")
-    time.sleep(1)
-    subprocess.call(limpieza, shell=True) 
-    banner()
-    print(f"{color.rojo}")
-    print("""SALIENDO…50%
-    ██████████▒▒▒▒▒▒▒▒▒""")
-    time.sleep(1)
-    subprocess.call(limpieza, shell=True) 
-    banner()
-    print(f"{color.rojo}")
-    print("""SALIENDO…70%
-    █████████████▒▒▒▒▒▒""")
-    time.sleep(1)
-    subprocess.call(limpieza, shell=True) 
-    banner()
-    print(f"{color.rojo}")
-    print("""SALIENDO…100%
-    ███████████████████""")
-    time.sleep(1)
-    subprocess.call(limpieza, shell=True)    
-    print(f"{color.fin}")
-    
+
+  print(f"{color.rojo}")
+  print("SALIENDO…100%")
+  print("█" * bar_length)
+  time.sleep(1)
+  subprocess.call(limpieza, shell=True)
+  print(f"{color.fin}")
+ 
 
 def menu():
     subprocess.call(limpieza, shell=True) 

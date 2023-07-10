@@ -10,4 +10,4 @@ Permite aislar versiones de dependencias del programa de versiones de paquetes q
 # TODO
 - Autoinstalar el programa como comando
 - Cambiar multiples llamadas consecutivas de printf for unica llamada
-- Usar un requirement para las dependencias?
+- Lintea/identa/estila siguiendo convenciones 
