@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import os, sys, time, io,re
 from colores import colorverde,colorazul,colorclasic,colormorado,colornaraja,coloramarillo
 import random
