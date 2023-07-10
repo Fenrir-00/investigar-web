@@ -231,19 +231,12 @@ def ping():
 
 
 def ip():
- if sistema == "Linux":
-  os.system("ifconfig &>buenos.txt")
- if sistema == "Windows":
-  os.system("ipconfig >buenos.txt")
- with open('buenos.txt') as f:
-   data = f.read()
- try:
-  resultado = re.search('192\S*', data)
-  var3=(resultado.group())
- except:
-  var3="127.0.0.1"
- return var3 
- 
+  try:
+    return re.search(r"192\S*", subprocess.run(["ifconfig" if sistema == "Linux" else "ipconfig"], capture_output=True, text=True).stdout).group()
+  except AttributeError:
+    return "127.0.0.1"
+
+
 
 def regis():
  banner()
