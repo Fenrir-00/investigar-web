@@ -16,3 +16,10 @@ Mismo problema que ping
 - Remplazar funciones que llaman a print por retorno de texto
 - Lintea/identa/estila siguiendo convenciones 
 - Muchas funciones dependen de variables globales en lugar de usar parámetros
+
+
+# NOTAS
+- El approach de diferenciar explicitamente entre Windows y Linux no es necesario en Python.
+- PING no viene en todos los OS. Solución 100% python es mejor.
+- Ifconfig/Ipconfig no viene en todos los OS. Solución 100% python es mejor.
+- Ifconfig está deprecated desde hace años y la alternativa adoptada es el comando ip 
