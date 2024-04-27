@@ -8,6 +8,7 @@ from colores import colorverde,colorazul,colorclasic,colormorado,colornaraja,col
 import random
 import platform
 import threading
+import subprocess
 while True:
  try:
   import requests
@@ -43,7 +44,7 @@ class color:
 
 r= requests.get("https://raw.githubusercontent.com/Fenrir-00/investigar-web/main/version.txt")
 r=r.text
-if r != "version=2.4\n":
+if r != "version=2.5\n":
  os.system(f"{limpieza}")
  print((color.rojo + ('HAY UNA NUEVA VERSION ACTUALIZA EL REPOSITORIO\n') * 20))
  input(f"{color.cyan} PULSA CUALQUIER TECLA PARA SEGUIR >>")
@@ -61,7 +62,7 @@ def version():
  texto ="""
  |=======================================================|
  | Script by              : #FENRIR-00                   |
- | Version                : Version  2.4                 |
+ | Version                : Version  2.5                 |
  | Follow me on Github    : https://github.com/Fenrir-00 |
  | Contact me on Telegram : @Ritorito1990                |
  ========================================================= """ 
@@ -177,6 +178,7 @@ def menu():
     print(f"{color.verde}[6]VER DISPOSITIVOS EN MI RED WIFI")
     print(f"{color.verde}[7]VER REGISTRO DE DOMINIOS")
     print(f"{color.verde}[8]CREAR EMAIL TEMPORAL")
+    print(f"{color.verde}[9]WHATWEB")
     print(f"{color.rojo}[0]SALIR{color.fin}")
     eleccion =input(f"{color.cyan}ELIJE UN NUMERO >>{color.fin} ")
     if eleccion == "1" :
@@ -195,6 +197,8 @@ def menu():
      regis()
     elif eleccion == "8" :
       email()
+    elif eleccion == "9" :
+      whatweb()
     elif eleccion == "0" :
      banner()
      salir() 
@@ -257,6 +261,47 @@ def ping(arg1=None):
    salir()
   else :
    incorrecto()
+
+def whatweb():
+ banner()
+ if not os.path.exists("WhatWeb"):
+    print("La carpeta Whatweb no existe. Descargando desde GitHub...")
+    try:
+        subprocess.run(["git", "clone", "https://github.com/urbanadventurer/WhatWeb"])
+        print(f"{color.verde}¡DESCARGA EXITOSA!")
+        var=input(f"{color.cyan}PULSA CUALQUIER TECLA PARA CINTINUAR >> {color.fin}")
+        whatweb()
+    except Exception as e:
+        print(f"Error al descargar desde GitHub: {e}")
+ else:
+  cabecera()
+  version()
+  print()
+  print(f"{color.morado}QUE PAGINA QUEIRES HACER ANALISIS{color.fin}")
+  print()
+  print(f"{color.amarillo}EJEMPLO GOOGLE.ES {color.fin}")
+  print()
+  var=input(f"{color.cyan}INTRODUCE LA DIRECCION >> {color.fin}")
+  try:
+    os.chdir("WhatWeb")
+    subprocess.run(["./whatweb", var], check=True)
+    os.chdir("..")
+    print()
+    print(f"{color.morado}QUE QUIERES HACER AHORA{color.fin}")
+    print()
+    print(f"{color.azul}[1] VOLVER")
+    print(f"{color.rojo}[0] SALIR{color.fin}")
+    print()
+    var=input(f"{color.cyan}ELIJE UN NUMERO >> {color.fin}")
+    if var == "1":
+     menu()
+    elif var == "0":
+     salir()
+    else :
+     incorrecto()
+  except subprocess.CalledProcessError:
+     print("Hubo un error al poner la direccion web") 
+
 
 def ip():
  if sistema == "Linux":
